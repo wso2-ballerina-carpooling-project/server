@@ -106,7 +106,7 @@ modules = [
 [[package]]
 org = "ballerina"
 name = "io"
-version = "1.6.1"
+version = "1.8.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.value"}
@@ -133,6 +133,9 @@ dependencies = [
 	{org = "ballerina", name = "lang.string"},
 	{org = "ballerina", name = "log"},
 	{org = "ballerina", name = "time"}
+]
+modules = [
+	{org = "ballerina", packageName = "jwt", moduleName = "jwt"}
 ]
 
 [[package]]
@@ -255,6 +258,9 @@ dependencies = [
 	{org = "ballerina", name = "time"},
 	{org = "ballerina", name = "url"}
 ]
+modules = [
+	{org = "ballerina", packageName = "oauth2", moduleName = "oauth2"}
+]
 
 [[package]]
 org = "ballerina"
@@ -288,7 +294,7 @@ modules = [
 [[package]]
 org = "ballerina"
 name = "task"
-version = "2.9.0"
+version = "2.7.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "time"}
@@ -354,21 +360,6 @@ modules = [
 ]
 
 [[package]]
-org = "lakpahana"
-name = "firebase_auth"
-version = "1.0.1"
-dependencies = [
-	{org = "ballerina", name = "io"},
-	{org = "ballerina", name = "jwt"},
-	{org = "ballerina", name = "log"},
-	{org = "ballerina", name = "oauth2"},
-	{org = "ballerina", name = "time"}
-]
-modules = [
-	{org = "lakpahana", packageName = "firebase_auth", moduleName = "firebase_auth"}
-]
-
-[[package]]
 org = "nalaka"
 name = "server"
 version = "0.1.0"
@@ -376,13 +367,14 @@ dependencies = [
 	{org = "ballerina", name = "crypto"},
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jwt"},
 	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "oauth2"},
 	{org = "ballerina", name = "regex"},
 	{org = "ballerina", name = "test"},
 	{org = "ballerina", name = "time"},
 	{org = "ballerina", name = "uuid"},
-	{org = "ballerinai", name = "observe"},
-	{org = "lakpahana", name = "firebase_auth"}
+	{org = "ballerinai", name = "observe"}
 ]
 modules = [
 	{org = "nalaka", packageName = "server", moduleName = "server"},

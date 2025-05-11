@@ -1,14 +1,12 @@
 import ballerina/http;
-
 import ballerina/log;
-import lakpahana/firebase_auth;
 import server.common;
 import ballerina/regex;
 
 
 
 public function generateAccessToken(common:GoogleCredentials credentials) returns string|error {
-    firebase_auth:AuthConfig authConfig = {
+    common:AuthConfig authConfig = {
         privateKeyPath: credentials.privateKeyFilePath,
         jwtConfig: {
             expTime: 3600,
@@ -17,7 +15,7 @@ public function generateAccessToken(common:GoogleCredentials credentials) return
         serviceAccountPath: credentials.serviceAccountJsonPath
     };
 
-    firebase_auth:Client authClient = check new(authConfig);
+    common:Client authClient = check new(authConfig);
     string|error token = authClient.generateToken();
     if token is error {
         log:printError("Failed to obtain access token", token);

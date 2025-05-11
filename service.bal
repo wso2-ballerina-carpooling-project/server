@@ -6,6 +6,7 @@ import server.firebase;
 import server.auth;
 import server.Map;
 import ballerina/log;
+import ballerina/io;
 
 string accessToken;
 
@@ -38,6 +39,7 @@ service /api on new http:Listener(8080){
         };
 
         accessToken = checkpanic firebase:generateAccessToken(credentials);
+        io:print(accessToken);
     }
 
     resource function post register(@http:Payload json payload) returns http:Response|error {
