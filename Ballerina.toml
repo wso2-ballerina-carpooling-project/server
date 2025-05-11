@@ -7,7 +7,7 @@ distribution = "2201.11.0"
 [build-options]
 observabilityIncluded = true
 
-# Add these dependency sections
+# Standard dependencies
 [[dependency]]
 org = "ballerina"
 name = "http"
@@ -53,3 +53,19 @@ org = "ballerinai"
 name = "observe"
 version = "0.0.0"
 
+# Add these missing dependencies
+[[dependency]]
+org = "ballerina"
+name = "jwt"
+version = "2.15.0"
+
+[[dependency]]
+org = "ballerina"
+name = "oauth2"
+version = "2.14.0"
+
+# Add this if you're using test features
+[[dependency]]
+org = "ballerina"
+name = "test"
+version = "0.0.0"
