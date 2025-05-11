@@ -7,63 +7,22 @@ distribution = "2201.11.0"
 [build-options]
 observabilityIncluded = true
 
-[central]
-url = "https://central.ballerina.io"
+[dependencies]
+"ballerina/http" = "2.14.1"
+"ballerina/log" = "2.12.0"
+"ballerina/io" = "1.8.0"
+"ballerina/jwt" = "2.15.0"
+"ballerina/oauth2" = "2.14.0"
+"ballerina/time" = "2.7.0"
+"ballerina/crypto" = "2.9.0"
+"ballerina/uuid" = "1.10.0"
+"ballerina/observe" = "1.4.0"
+"ballerina/regex" = "1.3.2"
+"ballerina/cloud" = "3.2.0"
+"ballerina/test" = "0.0.0"
+"ballerinai/observe" = "0.0.0"
 
-# Standard dependencies
-[[dependency]]
-org = "ballerina"
-name = "http"
-version = "2.14.1"
-
-[[dependency]]
-org = "ballerina"
-name = "io"
-version = "1.8.0"
-
-[[dependency]]
-org = "ballerina"
-name = "log"
-version = "2.12.0"
-
-[[dependency]]
-org = "ballerina"
-name = "time"
-version = "2.7.0"
-
-[[dependency]]
-org = "ballerina"
-name = "uuid"
-version = "1.10.0"
-
-[[dependency]]
-org = "ballerina"
-name = "crypto"
-version = "2.9.0"
-
-[[dependency]]
-org = "ballerina"
-name = "regex"
-version = "1.3.2"
-
-[[dependency]]
-org = "ballerina"
-name = "cloud"
-version = "3.2.0"
-
-[[dependency]]
-org = "ballerinai"
-name = "observe"
-version = "0.0.0"
-
-# Add these missing dependencies
-[[dependency]]
-org = "ballerina"
-name = "jwt"
-version = "2.15.0"
-
-[[dependency]]
-org = "ballerina"
-name = "oauth2"
-version = "2.14.0"
-
+[build]
+lifecycle = "choreocontrolplane.azurecr.io/buildpacksio/lifecycle:0.19.6"
+builder = "choreocontrolplane.azurecr.io/choreoipaas/choreo-buildpacks/builder:0.2.88"
+run-image = "choreocontrolplane.azurecr.io/choreoipaas/choreo-buildpacks/stacks/alpine/run:0.2.88"
