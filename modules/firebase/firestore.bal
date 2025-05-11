@@ -53,11 +53,7 @@ public function createFirestoreDocument(
 
     http:Response response = check firestoreClient->post("", request);
     
-    if (response.statusCode == 200) {
-        json result = check response.getJsonPayload();
-    } else {
-        string errorBody = check response.getTextPayload();
-    }
+   
 }
 
 public function processFirestoreValue(json value) returns map<json> {
