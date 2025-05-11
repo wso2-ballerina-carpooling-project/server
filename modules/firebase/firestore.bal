@@ -49,7 +49,7 @@ public function createFirestoreDocument(
 
     request.setJsonPayload(payload);
 
-    http:Response response = check firestoreClient->post("", request);
+    // http:Response response = check firestoreClient->post("", request);
     
    
 }

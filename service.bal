@@ -2,7 +2,6 @@
 import ballerina/http;
 import server.common;
 import server.firebase;
-
 import server.auth;
 import server.Map;
 import ballerina/log;

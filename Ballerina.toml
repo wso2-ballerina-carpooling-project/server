@@ -64,8 +64,3 @@ org = "ballerina"
 name = "oauth2"
 version = "2.14.0"
 
-# Add this if you're using test features
-[[dependency]]
-org = "ballerina"
-name = "test"
-version = "0.0.0"
