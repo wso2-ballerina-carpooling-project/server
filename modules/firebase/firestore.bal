@@ -1,5 +1,5 @@
 import ballerina/http;
-import ballerina/io;
+
 import ballerina/log;
 import lakpahana/firebase_auth;
 import server.common;
@@ -55,11 +55,8 @@ public function createFirestoreDocument(
     
     if (response.statusCode == 200) {
         json result = check response.getJsonPayload();
-        io:println("Document created successfully:", result);
     } else {
-        io:println("Error creating document. Status code:", response.statusCode);
         string errorBody = check response.getTextPayload();
-        io:println("Error details:", errorBody);
     }
 }
 
@@ -187,8 +184,7 @@ public function queryFirestoreDocuments(
     request.setHeader("Content-Type", "application/json");
     
     json whereFilter = buildFirestoreFilter(filter);
-    io:println(whereFilter);
-    
+
     json queryPayload = {
         "structuredQuery": {
             "from": [{"collectionId": collection}],
@@ -203,7 +199,7 @@ public function queryFirestoreDocuments(
     if (response.statusCode == 200) {
         json[] responseArray = <json[]>check response.getJsonPayload();
         map<json>[] results = [];
-        io:println(responseArray);
+
 
         
         foreach json item in responseArray {

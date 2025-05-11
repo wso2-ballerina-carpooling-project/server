@@ -386,6 +386,7 @@ dependencies = [
 ]
 modules = [
 	{org = "nalaka", packageName = "server", moduleName = "server"},
+	{org = "nalaka", packageName = "server", moduleName = "server.Map"},
 	{org = "nalaka", packageName = "server", moduleName = "server.auth"},
 	{org = "nalaka", packageName = "server", moduleName = "server.common"},
 	{org = "nalaka", packageName = "server", moduleName = "server.firebase"},
