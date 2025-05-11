@@ -7,6 +7,9 @@ distribution = "2201.11.0"
 [build-options]
 observabilityIncluded = true
 
+[central]
+url = "https://central.ballerina.io"
+
 # Standard dependencies
 [[dependency]]
 org = "ballerina"
